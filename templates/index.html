@@ -2,46 +2,35 @@
 <html>
   <head>
     <title>jovian careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: Roboto;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
+    
       #banner{
         width: 100%;
         height: 400px;
         object-fit: cover;
       }
-      h2{
-        font-family : Roboto;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-        font-weight : normal;
-      }
-      .bodytext{
-        font-family: Roboto;
-        color : rgb(80,80,80);
-      }
-      #container{
-        max-width: 720px;
-        margin: 0 auto;
-      }
+     
     </style>
   </head>
   <body>
-    <div id = "container">
-       <h1>Jovian Career</h1>
-       <img id = "banner"src="https://ed3303aa-c496-400a-b592-5e271232ed13-00-2g6af29zgqvx0.pike.replit.dev/static/banner.jpg"   height="320">
-        <h2>About Jovian</h2>
-        <p class ="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-       <h2>Open Positions</h2>
-       <p class = "bodytext">TODO - Show the jobs here</p>
-      <div style = "text-align:center;">
-       <button>Contact Us</button>
+    <div class = "container">
+       <h1 class ="text-center mt-2 mb-4"">{{company_name}} Career</h1>
+       <img class = "img-fluid"  src="https://ed3303aa-c496-400a-b592-5e271232ed13-00-2g6af29zgqvx0.pike.replit.dev/static/banner.jpg"   height="320">
+        <h2 class ="text-center mt-2 mb-4">About Jovian</h2>
+        <p class ="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+       <h2 class ="text-center">Open Positions</h2>
+       <p>
+         {% for job in jobs %}
+           {% include 'job.html' %}
+         {% endfor %}
+       </p>
+      
+      <div class="text-center">
+       <button class="btn btn-primary btn-lg">Contact Us</button>
+        <p class="mt-4">Copyright 2023, Jovian</p>
       </div>
     </div>
   </body>
