@@ -11,8 +11,11 @@ run = ["sh", "-c", "python app.py"]
 deploymentTarget = "cloudrun"
 
 [[ports]]
-localPort = 5000
+localPort = 4530
 externalPort = 80
+
+[[ports]]
+localPort = 5000
 
 [[ports]]
 localPort = 8000
