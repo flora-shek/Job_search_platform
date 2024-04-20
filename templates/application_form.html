@@ -1,27 +1,27 @@
 <h4 class="mb-3">Application Form</h4>
 <form action = "/job/{{job['id']}}/apply" method ="post">
   <div class ="form-floating mb-3">
-  <input type="text" name="full_name" placeholder="Dino Morea" class ="form-control" id ="name">
+  <input type="text" name="full_name" placeholder="Dino Morea" class ="form-control" id ="name" required="true">
     <label for="name">Full Name</label>
   </div>
   <div class ="form-floating mb-3">
-  <input type="email" name="email" placeholder="dinomorea@example.com" class ="form-control" id ="email">
+  <input type="email" name="email" placeholder="dinomorea@example.com" class ="form-control" id ="email" required="true">
     <label for ="email">Email</label>
   </div>
   <div class ="form-floating mb-3">
-  <input type="url" name="linkedin" class ="form-control" placeholder="https://linkedin.com/dinomorea" id="linkedin">
+  <input type="url" name="linkedin" class ="form-control" placeholder="https://linkedin.com/dinomorea" id="linkedin" required="true">
      <label for="linkedin">LinkedIn Profile(URL)</label>
   </div>
   <div class="form-floating mb-3">
-    <textarea class="form-control" placeholder="B.S. in Computer Science, University of XYZ, 2020" id="education" name ="education"></textarea>
+    <textarea class="form-control" placeholder="B.S. in Computer Science, University of XYZ, 2020" id="education" name ="education" required="true"></textarea>
     <label for="education">Education</label>
   </div>
   <div class="form-floating mb-3">
-    <textarea class="form-control" placeholder="2 years of experience as a software engineer" id="work" name ="work"></textarea>
+    <textarea class="form-control" placeholder="2 years of experience as a software engineer" id="work" name ="work" required="true"></textarea>
     <label for="work">Work Experience</label>
   </div>
   <div class ="form-floating mb-3">
-    <input type="url" name="linkedin" placeholder="portfolio link" class ="form-control" id ="portfolio">
+    <input type="url" name="linkedin" placeholder="portfolio link" class ="form-control" id ="portfolio" required="true">
     <label for="portfolio">Porfolio URL</label>
     </div>
   <div class ="mb-2 form-group text-center">
