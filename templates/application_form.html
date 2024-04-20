@@ -1,28 +1,28 @@
-<h4>Application Form</h4>
+<h4 class="mb-3">Application Form</h4>
 <form action = "/job/{{job['id']}}/apply" method ="post">
-  <div class ="mb-2 form-group">
-  <label>Full Name</label><br>
-  <input type="text" name="full_name" placeholder="Dino Morea" class ="form-control">
+  <div class ="form-floating mb-3">
+  <input type="text" name="full_name" placeholder="Dino Morea" class ="form-control" id ="name">
+    <label for="name">Full Name</label>
   </div>
-  <div class ="mb-2 form-group">
-  <label>Email</label><br>
-  <input type="email" name="email" placeholder="dinomorea@example.com" class ="form-control">
+  <div class ="form-floating mb-3">
+  <input type="email" name="email" placeholder="dinomorea@example.com" class ="form-control" id ="email">
+    <label for ="email">Email</label>
   </div>
-  <div class ="mb-2 form-group">
-  <label>LinkedIn Profile(URL)</label><br>
-  <input type="url" name="linkedin" class ="form-control" placeholder="https://linkedin.com/dinomorea">
+  <div class ="form-floating mb-3">
+  <input type="url" name="linkedin" class ="form-control" placeholder="https://linkedin.com/dinomorea" id="linkedin">
+     <label for="linkedin">LinkedIn Profile(URL)</label>
   </div>
-   <div class ="mb-2 form-group">
-    <label>Education</label><br>
-    <textarea name ="education" class ="form-control"></textarea>
-    </div>
-   <div class ="mb-2 form-group">
-    <label>Work Experience</label><br>
-     <textarea name ="work_experience" class ="form-control"></textarea>
-   </div>
-  <div class ="mb-2 form-group">
-    <label>Porfolio URL</label><br>
-    <input type="url" name="linkedin" placeholder="portfolio link" class ="form-control">
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="B.S. in Computer Science, University of XYZ, 2020" id="education" name ="education"></textarea>
+    <label for="education">Education</label>
+  </div>
+  <div class="form-floating mb-3">
+    <textarea class="form-control" placeholder="2 years of experience as a software engineer" id="work" name ="work"></textarea>
+    <label for="work">Work Experience</label>
+  </div>
+  <div class ="form-floating mb-3">
+    <input type="url" name="linkedin" placeholder="portfolio link" class ="form-control" id ="portfolio">
+    <label for="portfolio">Porfolio URL</label>
     </div>
   <div class ="mb-2 form-group text-center">
    <input type ="submit" name = "ok" class="btn btn-primary">
