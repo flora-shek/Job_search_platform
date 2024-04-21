@@ -29,6 +29,15 @@ def load_job_from_db(id):
   else:
     return result_all[0]
 def add_application_to_db(job_id,data):
-  pass
+  cursor = connection.cursor()
+  sql = "insert into applications(job_id,full_name,email,linkedin_url,education,work_experience,resume_url) values( %s,%s,%s,%s,%s,%s,%s)"
+  
+  result = cursor.execute(sql,(job_id,
+                               data['full_name'],
+                               data['email'],
+                               data['linkedin_url'],
+                               data['education'],
+                               data['work_experience'],
+                               data['resume_url']))
 
- 
+  connection.commit()
