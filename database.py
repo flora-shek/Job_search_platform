@@ -41,3 +41,12 @@ def add_application_to_db(job_id,data):
                                data['resume_url']))
 
   connection.commit()
+def load_applications_from_db(id):
+  cursor = connection.cursor()
+  sql = "SELECT * FROM `applications` WHERE `id`=%s "
+  result = cursor.execute(sql,(id))
+  result_all = cursor.fetchall()
+  if not result_all:
+    return None
+  else:
+    return result_all[0]
