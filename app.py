@@ -41,5 +41,14 @@ def apply_to_job(id):
       add_application_to_db(id,data)
       return render_template("application.html",application = data,job = job)
 
+@app.route("/search",methods =["post"])
+def search():
+  search = request.form.get("search")
+  lst = []
+  for i in range(len(JOBS)):
+    if search.lower() in JOBS[i]["title"].lower():
+      lst.append(JOBS[i])
+  return render_template("index.html",jobs = lst)
+  
 if __name__ == "__main__":
   app.run(host='0.0.0.0', port=4530, debug=True)
