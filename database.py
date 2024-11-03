@@ -19,6 +19,7 @@ def load_jobs_from_db():
   result = cursor.execute("select * from jobs")
   result_all = cursor.fetchall()
   return result_all
+  
 def load_job_from_db(id):
   cursor = connection.cursor()
   sql = "SELECT * FROM `jobs` WHERE `id`=%s "
